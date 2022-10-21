@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #0d192b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main.card {
+  background: #14253d;
+  color: white;
+  margin: 25px;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 350px;
+}
+main.card .image-container {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+main.card .image-container img {
+  width: 100%;
+  border-radius: 15px;
+}
+main.card .image-container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 15px;
+  opacity: 0;
+  background-color: rgba(0, 255, 247, 0.4);
+  transition: opacity 0.2s ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main.card .image-container .overlay:hover {
+  opacity: 100%;
+}
+main.card .image-container .overlay img {
+  height: 100px;
+  width: auto;
+}
+main.card h1 {
+  font-size: 1.6rem;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: 0.2s color ease-in;
+}
+main.card h1:hover {
+  color: #00fff7;
+}
+main.card p {
+  color: #8bacda;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+main.card .details {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  color: #8bacda;
+}
+main.card .details .ntf {
+  color: #00fff7;
+  font-weight: 600;
+  display: flex;
+}
+main.card .details .ntf::before {
+  content: url("images/icon-ethereum.svg");
+  margin-right: 5px;
+  align-items: center;
+  justify-content: center;
+}
+main.card .details .time {
+  display: flex;
+}
+main.card .details .time::before {
+  content: url("images/icon-clock.svg");
+  margin-right: 5px;
+  align-items: center;
+  justify-content: center;
+}
+main.card hr {
+  border: 1px solid #2f415b;
+}
+main.card .creator {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+main.card .creator img {
+  height: 35px;
+  border: 1px solid white;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+main.card .creator p a {
+  color: white;
+  cursor: pointer;
+  transition: 0.2s color ease-in;
+}
+main.card .creator p a:hover {
+  color: #00fff7;
+}
+
+footer {
+  color: white;
+  position: absolute;
+  bottom: 15px;
+  font-size: 11px;
+  text-align: center;
+}
+footer a {
+  color: #00fff7;
+}
+
+/*# sourceMappingURL=styles.css.map */
