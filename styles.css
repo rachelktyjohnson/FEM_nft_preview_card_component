@@ -51,7 +51,7 @@ main.card .image-container .overlay:hover {
   opacity: 100%;
 }
 main.card .image-container .overlay img {
-  height: 100px;
+  height: 65px;
   width: auto;
 }
 main.card h1 {
