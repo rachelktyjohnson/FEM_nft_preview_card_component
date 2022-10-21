@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+$color-softblue: hsl(215, 51%, 70%);
+$color-cyan: hsl(178, 100%, 50%);
+$color-mainbg: hsl(217, 54%, 11%);
+$color-cardbg: hsl(216, 50%, 16%);
+$color-cardline: hsl(215, 32%, 27%);
+$border-radius:15px;
+
+//fontsize: 18px
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:$color-mainbg;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+main.card{
+  background:$color-cardbg;
+  color:white;
+  margin:25px;
+  padding:20px;
+  border-radius:$border-radius;
+  max-width:350px;
+  .image-container{
+    position: relative;
+    width:100%;
+    cursor:pointer;
+    img{
+      width:100%;
+      border-radius: $border-radius;
+    }
+    .overlay{
+      position:absolute;
+      top:0;
+      bottom:0;
+      right:0;
+      left:0;
+      width:100%;
+      border-radius:$border-radius;
+      opacity:0;
+      background-color: hsla(178, 100%, 50%, 0.4);
+      transition: opacity 0.2s ease-in;
+      &:hover{
+        opacity:100%;
+      }
+      display:flex;
+      flex-direction:column;
+      justify-content: center;
+      align-items:center;
+      img{
+        height:100px;
+        width:auto;
+      }
+    }
+  }
+  h1{
+    font-size:1.6rem;
+    margin:15px 0;
+    cursor:pointer;
+    transition: 0.2s color ease-in;
+    &:hover{
+      color:$color-cyan;
+    }
+  }
+  p{
+    color:$color-softblue;
+    font-weight:300;
+    font-size:1.125rem;
+    line-height:1.5;
+  }
+  .details{
+    display:flex;
+    justify-content: space-between;
+    margin:20px 0;
+    color:$color-softblue;
+    .ntf {
+      color: $color-cyan;
+      font-weight:600;
+      display:flex;
+      &::before{
+        content: url("images/icon-ethereum.svg");
+        margin-right:5px;
+        align-items:center;
+        justify-content: center;
+      }
+    }
+    .time{
+      display:flex;
+      &::before{
+        content: url("images/icon-clock.svg");
+        margin-right:5px;
+        align-items:center;
+        justify-content: center;
+      }
+    }
+  }
+  hr{
+    border: 1px solid $color-cardline;
+  }
+  .creator{
+    display:flex;
+    align-items:center;
+    margin-top:20px;
+    img{
+      height:35px;
+      border:1px solid white;
+      border-radius:100%;
+      margin-right:10px;
+    }
+    p{
+      a{
+        color:white;
+        cursor:pointer;
+        transition: 0.2s color ease-in;
+        &:hover{
+          color:$color-cyan;
+        }
+      }
+    }
+  }
+}
+
+
+
+footer{
+  color:white;
+  position: absolute;
+  bottom:15px;
+  font-size: 11px; text-align: center;
+  a{
+    color:$color-cyan;
+  }
+}
